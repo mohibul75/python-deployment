@@ -85,6 +85,7 @@ sudo systemctl start gunicorn.socket
 sudo systemctl enable gunicorn.socket
 sudo systemctl status gunicorn
 ```
+#### Important Alert 
 Every time you make changes to your python files, if you want to add or update any project file - you will need to restart the systemd files with the following commands:
 
 ```sh
@@ -136,6 +137,23 @@ Be sure to change the IP here to the one you are using. When finished, save and 
 
 ```sh
 sudo ln -s /etc/nginx/sites-available/djang_website /etc/nginx/sites-enabled
+```
+Test your Nginx configuration for syntax errors by typing:
+
+```sh 
+sudo nginx -t
+```
+
+If no errors are reported, go ahead and restart Nginx by typing:
+```sh
+sudo systemctl restart nginx
+```
+
+you need to open up your firewall to normal traffic on port 80. Since you no longer need access to the development server, you can remove the rule to open port 8000 as well:
+
+```sh
+sudo ufw delete allow 8000
+sudo ufw allow 'Nginx Full'
 ```
 
 
