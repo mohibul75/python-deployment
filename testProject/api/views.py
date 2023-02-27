@@ -12,3 +12,7 @@ def helloWorld(request):
 @api_view(['GET'])
 def new(request):
     return Response('Hello to the new world...')
+
+@api_view(['GET'])
+def nothing(request):
+    return Response('nothing  to the new world...')
