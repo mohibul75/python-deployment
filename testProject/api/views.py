@@ -8,3 +8,7 @@ from rest_framework.decorators import api_view
 @api_view(['GET'])
 def helloWorld(request):
     return Response('Hello world...')
+
+@api_view(['GET'])
+def new(request):
+    return Response('Hello to the new world...')
