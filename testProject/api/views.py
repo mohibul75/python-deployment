@@ -16,3 +16,5 @@ def new(request,*args, **kwargs):
 @api_view(['GET'])
 def nothing(request,*args, **kwargs):
     return Response('nothing  to the new world...')
+
+
