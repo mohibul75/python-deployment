@@ -1,2 +1,2 @@
 # python-deployment
-nohup ./hello.sh 
+deployment with nohub
